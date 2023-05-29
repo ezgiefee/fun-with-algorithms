@@ -20,9 +20,7 @@ function validAnagram(str1, str2) {
   for (let i = 0; i < str2.length; i++) { 
     frequencyCounter2[str2.charAt(i)] = (frequencyCounter2[str2.charAt(i)] || 0 ) + 1;
   } 
-  console.log(frequencyCounter1);
-  console.log(frequencyCounter2);
-
+  
   for (let key in frequencyCounter1) {
     if (!(key in frequencyCounter2)) return false;
     if (frequencyCounter1[key] !== frequencyCounter2[key]) return false;
@@ -33,3 +31,25 @@ function validAnagram(str1, str2) {
 console.log(validAnagram('qwerty', 'qeywrt'));
 console.log(validAnagram('rat', 'car'));
 console.log(validAnagram('aaz', 'zza'));
+
+/*                                     Second Approach                                                          */ 
+function validAnagram1(first, second) {
+  if (first.length != second.length) return false;
+  const lookup = {};
+  for (let i = 0; i < first.length; i++){
+    let letter = first[i];
+    lookup[letter] ? lookup[letter] += 1 : lookup[letter] = 1;
+  }
+
+  for (let i = 0; i < second.length; i++){
+    let letter = second[i];
+    if (!lookup[letter]) {
+      return false;
+    } else {
+      lookup[letter] -= 1;
+    }
+  }
+  return true;
+}
+
+console.log(validAnagram1('anagram', 'nagaram'));
