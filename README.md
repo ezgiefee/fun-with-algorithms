@@ -1,5 +1,5 @@
 # FunWithAlgorithms
-This repository will contain some algorithm problems and their solutions. I will update this readme file according to the places I found the problems from. I will solve the problems on my way in the first approach but in other approachs; the solutions will be based on the sources. 
+This repository will contain some algorithm problems and their solutions. I will update this readme file according to the places, I found the problems from. I will solve the problems on my way in the first approach but in other approachs; the solutions will be based on the sources. You can find the questions in the beginning of the file as a comment.
 
 
 Sources: 
