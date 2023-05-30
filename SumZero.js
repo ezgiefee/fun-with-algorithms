@@ -16,11 +16,27 @@ function sumZero(arr) {
       return result;
     }
   }
-  if (result.length == 0) return undefined;
+  if (result.length == 0) result = undefined;
   return result;
 }
 
-console.log(sumZero([-4, -2, -1, 0, 1, 2, 3]));
-console.log(sumZero([-2, 0, 1, 3]));
-
+//console.log(sumZero([-4, -2, -1, 0, 1, 2, 3]));
+//console.log(sumZero([-2, 0, 1, 3]));
+console.log(sumZero([-4, -3, -2, -1, 0, 1, 2, 3, 10]));
 /****************************              Second Approach             ****************************/ 
+function sumZero1(arr) {
+  let left = 0;
+  let right = arr.length - 1;
+  while (left < right) {
+    let sum = arr[left] + arr[right];
+    if (sum === 0) {
+      return arr[left], arr[right];
+    } else if (sum > 0) {
+      right--;
+    } else {
+      left--;
+    }
+  }
+}
+
+console.log(sumZero1([-4, -3, -2, -1, 0, 1, 2, 3, 10]));
