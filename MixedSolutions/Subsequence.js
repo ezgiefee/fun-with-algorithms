@@ -34,7 +34,7 @@ console.log(isSubsequence('hello', 'hello world'));
 console.log(isSubsequence('sing', 'sting'));
 console.log(isSubsequence('abc', 'acb'));
 
-/****************************              First Approach             ****************************/ 
+/****************************              Second Approach             ****************************/ 
 function isSubsequenceS(str1, str2) {
   if (str1.length === 0) return true;
   if (str2.length === 0) return false;
