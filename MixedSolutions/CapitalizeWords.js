@@ -1,4 +1,6 @@
-function capitalizeWords (array) {
+/* Write a function to capitalize the words at an array */
+
+function capitalizeWords(array) {
   if (array.length === 1) {
     return [array[0].toUpperCase()];
   }
