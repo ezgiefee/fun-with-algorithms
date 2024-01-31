@@ -3,16 +3,16 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(isPalindrome(121))
+	result := isPalindrome(121)
+	fmt.Println(result)
 }
 
 func isPalindrome(x int) bool {
 	result := 0
 	tempX := x
-	res := false
 
 	if x < 0 {
-		res = false
+		return false
 	}
 
 	for x > 0 {
@@ -21,8 +21,6 @@ func isPalindrome(x int) bool {
 		x = x / 10
 	}
 
-	if result == tempX {
-		res = true
-	}
-	return res
+	return result == tempX
+
 }
