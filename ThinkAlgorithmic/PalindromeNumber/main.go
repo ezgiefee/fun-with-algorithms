@@ -3,8 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	result := isPalindrome(121)
-	fmt.Println(result)
+	fmt.Println(isPalindrome(121))
 }
 
 func isPalindrome(x int) bool {
